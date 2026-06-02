@@ -1,5 +1,34 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 100px;
-  }
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: skyblue;
+  color: #1a1a1a;
+}
+
+/* Title area */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Navigation box */
+.nav-box {
+  margin-top: 20px;
+  display: inline-block;
+  background: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Links inside nav box */
+.nav-box a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: 600;
+}
+
+.nav-box a:hover {
+  text-decoration: underline;
+}
