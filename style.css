@@ -1,3 +1,4 @@
+/* ===== Base Page Styling ===== */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -5,13 +6,23 @@ body {
   color: #1a1a1a;
 }
 
-/* Title area */
+/* ===== Header / Hero Section ===== */
 .hero {
   text-align: center;
   padding: 60px 20px;
 }
 
-/* Navigation box */
+.hero h1 {
+  margin: 0;
+  font-size: 48px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* ===== Navigation Box ===== */
 .nav-box {
   margin-top: 20px;
   display: inline-block;
@@ -21,7 +32,6 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Links inside nav box */
 .nav-box a {
   margin: 0 10px;
   text-decoration: none;
@@ -31,4 +41,56 @@ body {
 
 .nav-box a:hover {
   text-decoration: underline;
+}
+
+/* ===== Page Titles ===== */
+h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ===== 5x2 Project Grid ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 30px;
+}
+
+/* ===== Individual Boxes ===== */
+.box {
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: 0.2s ease;
+}
+
+/* Hover effect */
+.box:hover {
+  transform: scale(1.05);
+}
+
+/* Images inside boxes */
+.box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* Text under icons */
+.box p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ===== Optional Download Buttons ===== */
+a[download] {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0077b6;
+  font-weight: bold;
 }
