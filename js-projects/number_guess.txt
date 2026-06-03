@@ -1,53 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Number Guessing Game</title>
-
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      background: skyblue;
-      padding-top: 80px;
-    }
-
-    input, button {
-      padding: 10px;
-      font-size: 16px;
-    }
-  </style>
-</head>
-
-<body>
-
-<h1>Guess the Number (1 - 100)</h1>
-
-<input id="guessInput" type="number" placeholder="Enter guess">
-<button onclick="checkGuess()">Guess</button>
-
-<p id="message"></p>
-
-<script>
 let secretNumber = Math.floor(Math.random() * 100) + 1;
+let attempts = 0;
 
-function checkGuess() {
-  let guess = Number(document.getElementById("guessInput").value);
-  let message = document.getElementById("message");
+function guessNumber(userGuess) {
+  attempts++;
 
-  if (!guess) {
-    message.textContent = "Enter a number.";
+  if (userGuess === secretNumber) {
+    console.log("Correct! You win!");
+    console.log("Attempts:", attempts);
     return;
   }
 
-  if (guess > secretNumber) {
-    message.textContent = "Too high!";
-  } else if (guess < secretNumber) {
-    message.textContent = "Too low!";
+  if (userGuess > secretNumber) {
+    console.log("Too high!");
   } else {
-    message.textContent = "Correct!";
+    console.log("Too low!");
   }
 }
-</script>
 
-</body>
-</html>
+// Example usage:
+// guessNumber(50);
+// guessNumber(75);
+// guessNumber(10);

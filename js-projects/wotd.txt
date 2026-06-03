@@ -1,39 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Word of the Day</title>
-
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      padding-top: 80px;
-    }
-  </style>
-</head>
-
-<body>
-
-<h1>Word of the Day</h1>
-
-<h2 id="word">Serendipity</h2>
-<p id="def">Finding something good by accident.</p>
-
-<button onclick="change()">New Word</button>
-
-<script>
 let words = [
-  {w:"Serendipity", d:"Finding something good by accident"},
-  {w:"Resilience", d:"Ability to recover quickly"},
-  {w:"Algorithm", d:"Step-by-step problem solving process"}
+  { word: "Serendipity", definition: "Finding something good without looking for it" },
+  { word: "Resilience", definition: "Ability to recover from difficulties" },
+  { word: "Algorithm", definition: "Step-by-step process for solving a problem" },
+  { word: "Innovation", definition: "Creating new ideas or methods" },
+  { word: "Logic", definition: "Reasoning used to reach conclusions" }
 ];
 
-function change() {
-  let x = words[Math.floor(Math.random()*words.length)];
-  document.getElementById("word").textContent = x.w;
-  document.getElementById("def").textContent = x.d;
-}
-</script>
+function showWord() {
+  let randomIndex = Math.floor(Math.random() * words.length);
+  let selected = words[randomIndex];
 
-</body>
-</html>
+  console.log("Word of the Day:", selected.word);
+  console.log("Definition:", selected.definition);
+}
+
+// Example usage:
+showWord();

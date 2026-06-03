@@ -1,41 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Notes App</title>
+let notes = [];
 
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      padding-top: 80px;
-    }
-
-    input {
-      padding: 10px;
-    }
-  </style>
-</head>
-
-<body>
-
-<h1>Notes App</h1>
-
-<input id="note" placeholder="Write note">
-<button onclick="add()">Add</button>
-
-<ul id="list"></ul>
-
-<script>
-function add() {
-  let input = document.getElementById("note");
-  let li = document.createElement("li");
-
-  li.textContent = input.value;
-  document.getElementById("list").appendChild(li);
-
-  input.value = "";
+function addNote(note) {
+  notes.push(note);
+  console.log("Note added:", note);
 }
-</script>
 
-</body>
-</html>
+function showNotes() {
+  console.log("All Notes:");
+
+  for (let i = 0; i < notes.length; i++) {
+    console.log((i + 1) + ". " + notes[i]);
+  }
+}
+
+// Example usage:
+addNote("Study JavaScript");
+addNote("Finish portfolio");
+addNote("Review math");
+
+showNotes();

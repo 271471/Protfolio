@@ -1,37 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Affirmations</title>
+let cards = [];
+let sum = 0;
 
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      padding-top: 80px;
-    }
-  </style>
-</head>
-
-<body>
-
-<h1>Daily Affirmation</h1>
-
-<h2 id="text">Click for motivation</h2>
-
-<button onclick="show()">Generate</button>
-
-<script>
-let quotes = [
-  "I am capable of learning programming.",
-  "I improve every day.",
-  "I can build anything I focus on."
-];
-
-function show() {
-  let q = quotes[Math.floor(Math.random()*quotes.length)];
-  document.getElementById("text").textContent = q;
+function randomCard() {
+  return Math.floor(Math.random() * 11) + 1;
 }
-</script>
 
-</body>
-</html>
+function start() {
+  cards = [randomCard(), randomCard()];
+  update();
+}
+
+function hit() {
+  cards.push(randomCard());
+  update();
+}
+
+function update() {
+  sum = cards.reduce((a, b) => a + b, 0);
+
+  console.log("Cards:", cards);
+  console.log("Sum:", sum);
+
+  if (sum === 21) {
+    console.log("Blackjack! You win.");
+  } else if (sum > 21) {
+    console.log("You busted!");
+  }
+}
