@@ -1,0 +1,14 @@
+import random
+
+words = {
+    "Serendipity": "Finding something good without looking for it",
+    "Resilience": "Ability to recover from difficulties",
+    "Algorithm": "Step-by-step process for solving a problem",
+    "Innovation": "Creating new ideas or methods",
+    "Logic": "Reasoning used to reach conclusions"
+}
+
+word = random.choice(list(words.keys()))
+
+print("Word of the Day:", word)
+print("Definition:", words[word])

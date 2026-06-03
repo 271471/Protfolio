@@ -1,0 +1,41 @@
+import random
+
+words = ["python", "school", "computer", "javascript", "portfolio"]
+
+word = random.choice(words)
+guessed = []
+tries = 6
+
+print("Hangman Game Started!")
+
+while tries > 0:
+    display = ""
+
+    for letter in word:
+        if letter in guessed:
+            display += letter + " "
+        else:
+            display += "_ "
+
+    print("\nWord:", display)
+
+    guess = input("Guess a letter: ").lower()
+
+    if guess in guessed:
+        print("Already guessed that letter.")
+        continue
+
+    guessed.append(guess)
+
+    if guess not in word:
+        tries -= 1
+        print("Wrong! Tries left:", tries)
+    else:
+        print("Good guess!")
+
+    if all(letter in guessed for letter in word):
+        print("\nYou win! The word was:", word)
+        break
+
+if tries == 0:
+    print("\nYou lose! The word was:", word)
