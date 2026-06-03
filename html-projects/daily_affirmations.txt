@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Affirmations</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding-top: 80px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Daily Affirmation</h1>
+
+<h2 id="text">Click for motivation</h2>
+
+<button onclick="show()">Generate</button>
+
+<script>
+let quotes = [
+  "I am capable of learning programming.",
+  "I improve every day.",
+  "I can build anything I focus on."
+];
+
+function show() {
+  let q = quotes[Math.floor(Math.random()*quotes.length)];
+  document.getElementById("text").textContent = q;
+}
+</script>
+
+</body>
+</html>

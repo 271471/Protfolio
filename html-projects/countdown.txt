@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown Timer</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding-top: 80px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Countdown Timer</h1>
+<h2 id="time">10</h2>
+
+<button onclick="start()">Start</button>
+
+<script>
+let time = 10;
+let interval;
+
+function start() {
+  interval = setInterval(() => {
+    time--;
+    document.getElementById("time").textContent = time;
+
+    if (time <= 0) {
+      clearInterval(interval);
+      document.getElementById("time").textContent = "Done!";
+    }
+  }, 1000);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word of the Day</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding-top: 80px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Word of the Day</h1>
+
+<h2 id="word">Serendipity</h2>
+<p id="def">Finding something good by accident.</p>
+
+<button onclick="change()">New Word</button>
+
+<script>
+let words = [
+  {w:"Serendipity", d:"Finding something good by accident"},
+  {w:"Resilience", d:"Ability to recover quickly"},
+  {w:"Algorithm", d:"Step-by-step problem solving process"}
+];
+
+function change() {
+  let x = words[Math.floor(Math.random()*words.length)];
+  document.getElementById("word").textContent = x.w;
+  document.getElementById("def").textContent = x.d;
+}
+</script>
+
+</body>
+</html>

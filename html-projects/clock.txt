@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EST Clock</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: skyblue;
+      padding-top: 80px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>EST Clock</h1>
+<h2 id="clock"></h2>
+
+<script>
+function updateClock() {
+  let now = new Date();
+
+  let options = {
+    timeZone: "America/New_York",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  };
+
+  document.getElementById("clock").textContent =
+    new Intl.DateTimeFormat("en-US", options).format(now);
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>
