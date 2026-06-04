@@ -1,41 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Username Generator</title>
+let adjectives = ["Dark", "Pixel", "Cyber", "Shadow", "Ultra"];
+let nouns = ["Wolf", "Knight", "Gamer", "Dragon", "Ninja"];
 
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      padding-top: 80px;
-    }
+function generateUsername() {
+  let adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+  let noun = nouns[Math.floor(Math.random() * nouns.length)];
+  let number = Math.floor(Math.random() * 100);
 
-    button {
-      padding: 10px;
-    }
-  </style>
-</head>
+  let username = adj + noun + number;
 
-<body>
-
-<h1>Username Generator</h1>
-
-<h2 id="name"></h2>
-
-<button onclick="generate()">Generate</button>
-
-<script>
-let adj = ["Dark","Pixel","Shadow","Cyber","Ultra"];
-let noun = ["Wolf","Knight","Gamer","Dragon","Ninja"];
-
-function generate() {
-  let a = adj[Math.floor(Math.random()*adj.length)];
-  let n = noun[Math.floor(Math.random()*noun.length)];
-  let num = Math.floor(Math.random()*100);
-
-  document.getElementById("name").textContent = a + n + num;
+  console.log("Generated Username:", username);
 }
-</script>
 
-</body>
-</html>
+// Example usage:
+generateUsername();

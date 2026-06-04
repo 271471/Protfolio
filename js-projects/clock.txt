@@ -1,41 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>EST Clock</title>
-
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      background: skyblue;
-      padding-top: 80px;
-    }
-  </style>
-</head>
-
-<body>
-
-<h1>EST Clock</h1>
-<h2 id="clock"></h2>
-
-<script>
-function updateClock() {
+function showTime() {
   let now = new Date();
 
-  let options = {
-    timeZone: "America/New_York",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit"
-  };
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
 
-  document.getElementById("clock").textContent =
-    new Intl.DateTimeFormat("en-US", options).format(now);
+  // format with leading zeros
+  if (minutes < 10) minutes = "0" + minutes;
+  if (seconds < 10) seconds = "0" + seconds;
+
+  let time = hours + ":" + minutes + ":" + seconds;
+
+  console.log("Current Time:", time);
 }
 
-setInterval(updateClock, 1000);
-updateClock();
-</script>
-
-</body>
-</html>
+// updates every second
+setInterval(showTime, 1000);
+showTime();

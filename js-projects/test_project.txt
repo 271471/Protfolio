@@ -1,40 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Countdown Timer</title>
+let score = 0;
 
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      padding-top: 80px;
-    }
-  </style>
-</head>
+function question(promptText, answer) {
+  let user = Number(prompt(promptText));
 
-<body>
-
-<h1>Countdown Timer</h1>
-<h2 id="time">10</h2>
-
-<button onclick="start()">Start</button>
-
-<script>
-let time = 10;
-let interval;
-
-function start() {
-  interval = setInterval(() => {
-    time--;
-    document.getElementById("time").textContent = time;
-
-    if (time <= 0) {
-      clearInterval(interval);
-      document.getElementById("time").textContent = "Done!";
-    }
-  }, 1000);
+  if (user === answer) {
+    score++;
+  }
 }
-</script>
 
-</body>
-</html>
+question("5 + 3 =", 8);
+question("10 + 4 =", 14);
+question("6 + 7 =", 13);
+question("9 + 2 =", 11);
+question("8 + 5 =", 13);
+
+function grade() {
+  console.log("Score:", score, "/5");
+
+  if (score === 5) console.log("Grade: A");
+  else if (score === 4) console.log("Grade: B");
+  else if (score === 3) console.log("Grade: C");
+  else if (score === 2) console.log("Grade: D");
+  else console.log("Grade: F");
+}
+
+grade();

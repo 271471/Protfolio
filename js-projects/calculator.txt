@@ -1,36 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Color Picker</title>
+function calculate(a, b, operator) {
+  if (operator === "+") return a + b;
+  if (operator === "-") return a - b;
+  if (operator === "*") return a * b;
+  if (operator === "/") return a / b;
 
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      padding-top: 80px;
-      transition: 0.3s;
-    }
-
-    button {
-      padding: 10px;
-    }
-  </style>
-</head>
-
-<body>
-
-<h1>Random HEX Color</h1>
-<h2 id="hex">#FFFFFF</h2>
-
-<button onclick="generate()">Generate</button>
-
-<script>
-function generate() {
-  let color = "#" + Math.floor(Math.random()*16777215).toString(16);
-  document.body.style.background = color;
-  document.getElementById("hex").textContent = color;
+  return "Invalid operator";
 }
-</script>
-
-</body>
-</html>
