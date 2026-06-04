@@ -5,7 +5,10 @@ function showTime() {
   let minutes = now.getMinutes();
   let seconds = now.getSeconds();
 
+<<<<<<< HEAD
   // format with leading zeros
+=======
+>>>>>>> 265bd3732a1df7750459a97b28f2968b634ac741
   if (minutes < 10) minutes = "0" + minutes;
   if (seconds < 10) seconds = "0" + seconds;
 
@@ -14,6 +17,9 @@ function showTime() {
   console.log("Current Time:", time);
 }
 
+<<<<<<< HEAD
 // updates every second
+=======
+>>>>>>> 265bd3732a1df7750459a97b28f2968b634ac741
 setInterval(showTime, 1000);
 showTime();
