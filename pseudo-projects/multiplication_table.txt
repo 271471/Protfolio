@@ -1,0 +1,10 @@
+START
+
+INPUT number
+
+FOR count = 1 TO 10
+    DISPLAY number * count
+
+END FOR
+
+END

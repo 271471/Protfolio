@@ -1,0 +1,10 @@
+START
+
+INPUT age
+
+IF age >= 18
+    DISPLAY "Adult"
+ELSE
+    DISPLAY "Minor"
+
+END

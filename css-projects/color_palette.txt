@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.palette {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.color-box {
+    width: 120px;
+    height: 120px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red { background-color: red; }
+.blue { background-color: blue; }
+.green { background-color: green; }
+.purple { background-color: purple; }
+.orange { background-color: orange; }
+</style>
+</head>
+
+<body>
+
+<h1>Color Palette</h1>
+
+<div class="palette">
+    <div class="color-box red">Red</div>
+    <div class="color-box blue">Blue</div>
+    <div class="color-box green">Green</div>
+    <div class="color-box purple">Purple</div>
+    <div class="color-box orange">Orange</div>
+</div>
+
+</body>
+</html>

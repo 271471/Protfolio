@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+}
+
+.card {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px gray;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+p {
+    color: gray;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="profile-pic"></div>
+
+    <h2>John Doe</h2>
+
+    <p>Web Developer</p>
+
+    <p>john@example.com</p>
+</div>
+
+</body>
+</html>

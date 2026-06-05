@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 250px;
+    margin: 100px auto;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px gray;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border-radius: 50%;
+    margin: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="avatar"></div>
+
+    <h2>Jane Smith</h2>
+
+    <p>Student Developer</p>
+</div>
+
+</body>
+</html>

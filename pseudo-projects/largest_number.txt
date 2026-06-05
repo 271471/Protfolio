@@ -1,0 +1,11 @@
+START
+
+INPUT num1
+INPUT num2
+
+IF num1 > num2
+    DISPLAY num1
+ELSE
+    DISPLAY num2
+
+END

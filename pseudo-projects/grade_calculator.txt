@@ -1,0 +1,16 @@
+START
+
+INPUT score
+
+IF score >= 90
+    DISPLAY "A"
+ELSE IF score >= 80
+    DISPLAY "B"
+ELSE IF score >= 70
+    DISPLAY "C"
+ELSE IF score >= 60
+    DISPLAY "D"
+ELSE
+    DISPLAY "F"
+
+END

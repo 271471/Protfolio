@@ -1,0 +1,10 @@
+START
+
+GENERATE random number 0 or 1
+
+IF number = 0
+    DISPLAY "Heads"
+ELSE
+    DISPLAY "Tails"
+
+END

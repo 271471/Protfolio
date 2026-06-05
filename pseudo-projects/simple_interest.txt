@@ -1,0 +1,11 @@
+START
+
+INPUT principal
+INPUT rate
+INPUT time
+
+interest = (principal * rate * time) / 100
+
+DISPLAY interest
+
+END

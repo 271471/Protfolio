@@ -1,0 +1,8 @@
+START
+
+FOR count = 1 TO 100
+    DISPLAY count
+
+END FOR
+
+END
